@@ -35,7 +35,7 @@
             </a>
 
             <nav class="nav-actions">
-                <a href="#buscar-seccion" onclick="switchTab('tab-lookup')" class="btn btn-outline btn-sm">
+                <a href="{{ route('home') }}?tab=lookup#formulario-seccion" onclick="handleNavbarLookup(event)" class="btn btn-outline btn-sm">
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <span>Consultar Cédula</span>
                 </a>
@@ -140,10 +140,32 @@
             });
 
             if (tabId === 'tab-lookup') {
-                const searchInput = document.getElementById('lookup_cedula');
-                if (searchInput) searchInput.focus();
+                setTimeout(() => {
+                    const searchInput = document.getElementById('lookup_cedula');
+                    if (searchInput) {
+                        searchInput.focus();
+                        searchInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                }, 50);
             }
         }
+
+        // Manejador del botón Consultar Cédula del Navbar
+        function handleNavbarLookup(e) {
+            const lookupTab = document.getElementById('tab-lookup');
+            if (lookupTab) {
+                if (e) e.preventDefault();
+                switchTab('tab-lookup');
+            }
+        }
+
+        // Activar pestaña si la URL incluye ?tab=lookup o #formulario-seccion
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (window.location.hash === '#formulario-seccion' || urlParams.get('tab') === 'lookup') {
+                switchTab('tab-lookup');
+            }
+        });
 
         // Lightbox
         function openFlyerLightbox() {

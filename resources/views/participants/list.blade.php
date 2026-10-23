@@ -17,14 +17,14 @@
             </p>
         </div>
 
-        <div style="display: flex; gap: 0.75rem;">
+        <!-- <div style="display: flex; gap: 0.75rem;">
             <a href="{{ route('participants.export') }}" class="btn btn-gold btn-sm">
                 <i class="fa-solid fa-file-csv"></i> Descargar CSV Oficial
             </a>
             <button onclick="window.print()" class="btn btn-outline btn-sm">
                 <i class="fa-solid fa-print"></i> Imprimir Roster
             </button>
-        </div>
+        </div> -->
     </div>
 
     <!-- Search Bar -->
@@ -56,7 +56,7 @@
                     <th>Cédula</th>
                     <th>Teléfono</th>
                     <th>Fecha Registro</th>
-                    <th style="text-align: right;">Acciones</th>
+                    <!-- <th style="text-align: right;">Acciones</th> -->
                 </tr>
             </thead>
             <tbody>
@@ -77,11 +77,11 @@
                         <td style="color: var(--text-muted); font-size: 0.85rem;">
                             {{ $p->created_at->format('d/m/Y H:i') }}
                         </td>
-                        <td style="text-align: right;">
+                        <!-- <td style="text-align: right;">
                             <a href="{{ route('participants.bib', $p->bib_number) }}" class="btn btn-outline btn-sm" target="_blank" title="Ver dorsal e imprimir">
                                 <i class="fa-solid fa-print"></i>
                             </a>
-                        </td>
+                        </td> -->
                     </tr>
                 @empty
                     <tr>

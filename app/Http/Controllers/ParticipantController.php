@@ -12,7 +12,7 @@ use Illuminate\View\View;
 class ParticipantController extends Controller
 {
     /**
-     * Display the main registration page.
+     * Muestra la pantalla de registro.
      */
     public function index(): View
     {
@@ -65,7 +65,7 @@ class ParticipantController extends Controller
 
         $formattedId = Participant::formatNationalId($rawId, $prefix);
 
-        // Check if participant is already registered
+        // Revisa si ya existe
         $existing = Participant::findByAnyNationalId($cleanDigits);
         if ($existing) {
             $msg = "Esta cédula ya se encuentra registrada con el número {$existing->bib_number}.";
@@ -85,7 +85,7 @@ class ParticipantController extends Controller
             ]);
         }
 
-        // Concurrency-safe atomic registration
+        // registro en una transaccion
         try {
             $participant = DB::transaction(function () use ($validated, $formattedId, $cleanDigits) {
                 $bibData = Participant::getNextBib();
