@@ -99,7 +99,7 @@
 
             <!-- Bib Footer Info -->
             <div class="bib-footer">
-                <span>DOMINGO 23 &bull; RECTORADO UNELLEZ</span>
+                <span>DOMINGO 25 &bull; RECTORADO UNELLEZ</span>
                 <span>REGISTRADO: {{ $participant->created_at->format('d/m/Y H:i') }}</span>
             </div>
         </div>

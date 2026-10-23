@@ -10,7 +10,7 @@
         <div>
             <div class="hero-tag">
                 <span class="dot"></span>
-                <span>Inscripciones Abiertas &bull; Domingo 23</span>
+                <span>Inscripciones Abiertas &bull; Domingo 25</span>
             </div>
             <h2 class="hero-title-main" style="font-size: 2.1rem; font-weight: 800; line-height: 1.15; margin-bottom: 0.5rem; letter-spacing: -0.5px;">
                 5K Caminata y Carrera <br>
@@ -44,7 +44,7 @@
             <div class="race-details-grid">
                 <div class="detail-item">
                     <div class="detail-label"><i class="fa-regular fa-calendar" style="color: var(--accent-gold);"></i> Fecha</div>
-                    <div class="detail-value">Domingo 23</div>
+                    <div class="detail-value">Domingo 25</div>
                 </div>
 
                 <div class="detail-item">

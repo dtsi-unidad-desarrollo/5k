@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title', 'Carrera 5K y Caminata | 51° Aniversario UNELLEZ')</title>
-    <meta name="description" content="Registro oficial para la Carrera 5K y Caminata del 51 Aniversario UNELLEZ. Domingo 23, salida y llegada en el estacionamiento del Rectorado.">
+    <meta name="description" content="Registro oficial para la Carrera 5K y Caminata del 51 Aniversario UNELLEZ. Domingo 25, salida y llegada en el estacionamiento del Rectorado.">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -94,7 +94,7 @@
 
                 <!-- Bib Footer Info -->
                 <div class="bib-footer">
-                    <span>DOMINGO 23 &bull; RECTORADO UNELLEZ</span>
+                    <span>DOMINGO 25 &bull; RECTORADO UNELLEZ</span>
                     <span>REGISTRO OFICIAL VERIFICADO</span>
                 </div>
             </div>
